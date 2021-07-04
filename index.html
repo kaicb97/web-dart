@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+   <script src="./templates/playerBox.tmp"></script>
+   <script src="./templates/numberedButton.tmp"></script>
+
+    <script src="./js/player/buildPlayerScoreboard.js"></script>
+    <script src="./js/player/Player.js"></script>
+    
+    <script src="./js/scoreInputPanel/Numbered.js"></script>
+    <script src="./js/scoreInputPanel/CalculationView.js"></script>
+    
+
+
+<style>
+
+.playerBoxClass {
+  background-color: #e2e2e2;
+  margin: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+    <div id="header">
+        <button>?</button>
+        <button>Match erstellen</button>
+        <span id="enter_match">
+            <input type="text" placeholder="Match-ID"><br>
+            <button>Beitreten</button>
+    </span>
+    </div>
+
+    <div id="center_body" disabled>
+
+        <button>some buttons</button>
+
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+<script>
+
+
+let centerBody = document.getElementById("center_body");
+
+let numberedPanel = new Numbered();
+let calculationView = new CalculationView();
+
+centerBody.appendChild(numberedPanel.getBoard());
+centerBody.appendChild(calculationView.getBoard());
+
+
+
+let footer = document.getElementById("footer");
+
+let numberOfPlayers = 2;
+let players = [];
+
+for(let i = 0; i < numberOfPlayers; i++) {
+    players[i] = new Player();
+    footer.appendChild(players[i].getContainer());
+}
+
+
+console.log(players);
+    
+</script>
+
+
+<body>
+
+
+
+</html>

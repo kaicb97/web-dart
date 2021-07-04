@@ -1,0 +1,5 @@
+numberedButtonTemplate = `
+
+<span><button>###VALUE###<button><button>x2</button><button>x3</button></span>
+
+`;

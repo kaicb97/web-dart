@@ -1,0 +1,26 @@
+"numberOfPlayers": 2,
+
+"matchDetails" : {
+  "lobbyName" : "mein Hobby Lobby",
+  "goal" : 501
+
+}
+
+"players" : [
+
+"one" : {
+  "name" : "John",
+  "throws" : [73, 33, 180, 2]
+},
+
+"two" : {
+  "name" : "John",
+  "throws" : [22, 99, 1]
+}
+
+
+]
+
+
+
+
