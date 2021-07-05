@@ -24,7 +24,7 @@ class Numbered {
         var button = document.createElement("div");
 
         var buttonDefinition = numberedButtonTemplate;
-        buttonDefinition = buttonDefinition.replace("###VALUE###", value);
+        buttonDefinition = buttonDefinition.replaceAll("###VALUE###", value);
         button.innerHTML = buttonDefinition;
 
         return button;

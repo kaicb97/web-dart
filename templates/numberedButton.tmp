@@ -1,5 +1,11 @@
 numberedButtonTemplate = `
 
-<span><button>###VALUE###<button><button>x2</button><button>x3</button></span>
+<span>
+
+<button onclick="throwValue(###VALUE###, 1)">###VALUE###</button>
+<button onclick="throwValue(###VALUE###, 2)">x2</button>
+<button onclick="throwValue(###VALUE###, 3)">x3</button>
+
+</span>
 
 `;
