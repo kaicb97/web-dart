@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+   
+   <meta charset="UTF-8">
+
+
    <script src="./templates/playerBox.tmp"></script>
    <script src="./templates/numberedButton.tmp"></script>
    <script src="./templates/calculationView.tmp"></script>
@@ -68,6 +71,7 @@ let players = [];
 for(let i = 0; i < numberOfPlayers; i++) {
     players[i] = new Player();
     footer.appendChild(players[i].getContainer());
+    players[i].initPlayer("Player A", 501);
 }
 
 
@@ -83,6 +87,11 @@ function throwValue(x, y) {
 function deleteThrowValue(row) {
   calculationView.deleteThrowValue(row);
 }
+
+function confirmThrow() {
+  players[0].addThrow(calculationView.getThrowValue());
+}
+
 </script>
 
 

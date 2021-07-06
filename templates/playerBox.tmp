@@ -2,7 +2,7 @@ playerBoxTemplate = `
 
 <table>
 <tr><td>name: </td><td>###NAME###</td></tr>
-<tr><td>score: </td><td>###501###</td></tr>
+<tr><td>score: </td><td><span id="###CONTAINERID###"></span></td></tr>
 
 </table>
 

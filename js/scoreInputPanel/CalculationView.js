@@ -11,7 +11,18 @@ class CalculationView {
         return this.board;
     }
 
+getThrowValue() {
 
+    var value = 0;
+
+    for(var i = 0; i < 2; i++) {
+        if(this.throwValues[i].length > 0) {
+            value += this.throwValues[i][0] * this.throwValues[i][1];
+        }
+    }
+
+    return value;
+}
 
 
      buildScoreboard() {
@@ -33,6 +44,8 @@ class CalculationView {
         this.r1c1 = document.getElementById('calculationView_11');
         this.r2c0 = document.getElementById('calculationView_20');
         this.r2c1 = document.getElementById('calculationView_21');
+
+        this.totalSpan = document.getElementById("calculationViewTotal");
     }
 
 
@@ -72,15 +85,16 @@ class CalculationView {
                 break;
         }
 
+        this.totalSpan.innerHTML = this.getThrowValue();
 
         return true;
     }
 
     deleteThrowValue(row) {
 
-        console.log(this.throwValues)
+
         this.throwValues[row] = [];
-        console.log(this.throwValues)
+        this.totalSpan.innerHTML = this.getThrowValue();
 
         switch(row) {
 
